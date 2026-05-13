@@ -1,0 +1,548 @@
+[
+  {
+    "screenId": "5fa85f0cbce74072aa5dcbdb4b91cb54",
+    "screenTitle": "Pause Overlay - Tetris Supervisor",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "button",
+        "label": "Resume",
+        "line": 171
+      },
+      {
+        "type": "button",
+        "label": "Restart",
+        "line": 176
+      },
+      {
+        "type": "button",
+        "label": "Return to Main Menu",
+        "line": 181
+      }
+    ],
+    "navigation": [],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "Resume",
+        "line": 171
+      },
+      {
+        "type": "button",
+        "label": "Restart",
+        "line": 176
+      },
+      {
+        "type": "button",
+        "label": "Return to Main Menu",
+        "line": 181
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 3,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "26175aa4344f4983b9f553e945e96ade",
+    "screenTitle": "Game Options - Tetris Supervisor",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Command",
+        "href": "#",
+        "line": 120
+      },
+      {
+        "type": "link",
+        "label": "leaderboard",
+        "href": "#",
+        "line": 124
+      },
+      {
+        "type": "link",
+        "label": "Archive",
+        "href": "#",
+        "line": 128
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 132
+      },
+      {
+        "type": "button",
+        "label": "Save &amp; Exit",
+        "line": 193
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 151
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 159
+      },
+      {
+        "type": "input",
+        "label": "range",
+        "inputType": "range",
+        "line": 173
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 178
+      },
+      {
+        "type": "input",
+        "label": "range",
+        "inputType": "range",
+        "line": 188
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Command",
+        "href": "#",
+        "line": 120
+      },
+      {
+        "type": "link",
+        "label": "leaderboard",
+        "href": "#",
+        "line": 124
+      },
+      {
+        "type": "link",
+        "label": "Archive",
+        "href": "#",
+        "line": 128
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 132
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "Save &amp; Exit",
+        "line": 193
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 151
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 159
+      },
+      {
+        "type": "input",
+        "label": "range",
+        "inputType": "range",
+        "line": 173
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 178
+      },
+      {
+        "type": "input",
+        "label": "range",
+        "inputType": "range",
+        "line": 188
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 10,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "d448c39c04f14497a57ce3c05d24dd6d",
+    "screenTitle": "Game Board - Tetris Supervisor",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Command",
+        "href": "#",
+        "line": 169
+      },
+      {
+        "type": "link",
+        "label": "leaderboard",
+        "href": "#",
+        "line": 173
+      },
+      {
+        "type": "link",
+        "label": "Archive",
+        "href": "#",
+        "line": 177
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 181
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 154
+      },
+      {
+        "type": "button",
+        "label": "help_outline",
+        "line": 157
+      },
+      {
+        "type": "button",
+        "label": "Rotate",
+        "line": 334
+      },
+      {
+        "type": "button",
+        "label": "Hold",
+        "line": 338
+      },
+      {
+        "type": "button",
+        "label": "Drop",
+        "line": 342
+      },
+      {
+        "type": "button",
+        "label": "Pause",
+        "line": 346
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Command",
+        "href": "#",
+        "line": 169
+      },
+      {
+        "type": "link",
+        "label": "leaderboard",
+        "href": "#",
+        "line": 173
+      },
+      {
+        "type": "link",
+        "label": "Archive",
+        "href": "#",
+        "line": 177
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 181
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 154
+      },
+      {
+        "type": "button",
+        "label": "help_outline",
+        "line": 157
+      },
+      {
+        "type": "button",
+        "label": "Rotate",
+        "line": 334
+      },
+      {
+        "type": "button",
+        "label": "Hold",
+        "line": 338
+      },
+      {
+        "type": "button",
+        "label": "Drop",
+        "line": 342
+      },
+      {
+        "type": "button",
+        "label": "Pause",
+        "line": 346
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 10,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "c31b03ee843d4fcbaa671d767099dc8c",
+    "screenTitle": "Main Menu - Tetris Supervisor",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "button",
+        "label": "START_GAME",
+        "line": 194
+      },
+      {
+        "type": "button",
+        "label": "HIGH_SCORES",
+        "line": 198
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 202
+      },
+      {
+        "type": "button",
+        "label": "HELP",
+        "line": 206
+      }
+    ],
+    "navigation": [],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "START_GAME",
+        "line": 194
+      },
+      {
+        "type": "button",
+        "label": "HIGH_SCORES",
+        "line": 198
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 202
+      },
+      {
+        "type": "button",
+        "label": "HELP",
+        "line": 206
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 4,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "48010fd59c1d4f8db38814b4d1a5ba32",
+    "screenTitle": "Game Over - Tetris Supervisor",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "button",
+        "label": "Replay Game",
+        "line": 211
+      },
+      {
+        "type": "button",
+        "label": "Score",
+        "line": 215
+      },
+      {
+        "type": "button",
+        "label": "Main Menu",
+        "line": 219
+      }
+    ],
+    "navigation": [],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "Replay Game",
+        "line": 211
+      },
+      {
+        "type": "button",
+        "label": "Score",
+        "line": 215
+      },
+      {
+        "type": "button",
+        "label": "Main Menu",
+        "line": 219
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 3,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "e29f1c1d70414abf856e26cac390b508",
+    "screenTitle": "Controls Help - Tetris Supervisor",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Command",
+        "href": "#",
+        "line": 144
+      },
+      {
+        "type": "link",
+        "label": "leaderboard",
+        "href": "#",
+        "line": 150
+      },
+      {
+        "type": "link",
+        "label": "Archive",
+        "href": "#",
+        "line": 156
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 162
+      },
+      {
+        "type": "link",
+        "label": "Rotate",
+        "href": "#",
+        "line": 288
+      },
+      {
+        "type": "link",
+        "label": "Hold",
+        "href": "#",
+        "line": 292
+      },
+      {
+        "type": "link",
+        "label": "Drop",
+        "href": "#",
+        "line": 296
+      },
+      {
+        "type": "link",
+        "label": "Pause",
+        "href": "#",
+        "line": 300
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 128
+      },
+      {
+        "type": "button",
+        "label": "help_outline",
+        "line": 131
+      },
+      {
+        "type": "button",
+        "label": "BACK_TO_MENU",
+        "line": 177
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Command",
+        "href": "#",
+        "line": 144
+      },
+      {
+        "type": "link",
+        "label": "leaderboard",
+        "href": "#",
+        "line": 150
+      },
+      {
+        "type": "link",
+        "label": "Archive",
+        "href": "#",
+        "line": 156
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 162
+      },
+      {
+        "type": "link",
+        "label": "Rotate",
+        "href": "#",
+        "line": 288
+      },
+      {
+        "type": "link",
+        "label": "Hold",
+        "href": "#",
+        "line": 292
+      },
+      {
+        "type": "link",
+        "label": "Drop",
+        "href": "#",
+        "line": 296
+      },
+      {
+        "type": "link",
+        "label": "Pause",
+        "href": "#",
+        "line": 300
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 128
+      },
+      {
+        "type": "button",
+        "label": "help_outline",
+        "line": 131
+      },
+      {
+        "type": "button",
+        "label": "BACK_TO_MENU",
+        "line": 177
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 11,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  }
+]
