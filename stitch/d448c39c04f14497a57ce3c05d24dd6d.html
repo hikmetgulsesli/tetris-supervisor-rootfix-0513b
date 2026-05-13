@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tetris Supervisor - Game Board</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#b9c7e0",
+                        "on-secondary-container": "#004119",
+                        "error-container": "#93000a",
+                        "surface-container-high": "#2a2a2b",
+                        "on-primary-fixed-variant": "#3a485c",
+                        "on-surface": "#e4e2e4",
+                        "primary": "#b9c7e0",
+                        "on-background": "#e4e2e4",
+                        "tertiary-container": "#503d1e",
+                        "surface-container": "#1f1f21",
+                        "tertiary": "#dfc299",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed-variant": "#005321",
+                        "inverse-primary": "#515f74",
+                        "on-surface-variant": "#c5c6cd",
+                        "inverse-surface": "#e4e2e4",
+                        "secondary-fixed": "#6bff8f",
+                        "on-tertiary-fixed-variant": "#574424",
+                        "surface-container-highest": "#343536",
+                        "surface-tint": "#b9c7e0",
+                        "on-tertiary-container": "#c3a881",
+                        "primary-container": "#334155",
+                        "surface-variant": "#343536",
+                        "surface": "#131315",
+                        "on-secondary": "#003915",
+                        "on-tertiary-fixed": "#281901",
+                        "on-primary": "#233144",
+                        "tertiary-fixed-dim": "#dfc299",
+                        "tertiary-fixed": "#fcdeb3",
+                        "surface-container-low": "#1b1b1d",
+                        "inverse-on-surface": "#303032",
+                        "primary-fixed": "#d5e3fd",
+                        "outline": "#8e9197",
+                        "surface-dim": "#131315",
+                        "on-secondary-fixed": "#002109",
+                        "surface-bright": "#39393b",
+                        "surface-container-lowest": "#0e0e10",
+                        "on-primary-fixed": "#0d1c2f",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#4ae176",
+                        "on-tertiary": "#3f2d10",
+                        "on-error": "#690005",
+                        "background": "#131315",
+                        "secondary": "#4ae176",
+                        "on-primary-container": "#9eadc5",
+                        "secondary-container": "#00b954",
+                        "outline-variant": "#44474c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "grid-gap": "2px",
+                        "unit": "4px",
+                        "md": "16px",
+                        "container-max": "1200px",
+                        "sm": "8px",
+                        "lg": "24px",
+                        "xs": "4px",
+                        "xl": "32px"
+                    },
+                    "fontFamily": {
+                        "label-compact": ["JetBrains Mono"],
+                        "display-arcade": ["Hanken Grotesk"],
+                        "data-mono": ["JetBrains Mono"],
+                        "h2-hud": ["Hanken Grotesk"],
+                        "h1-hud": ["Hanken Grotesk"],
+                        "body-standard": ["Inter"],
+                        "body-bold": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-compact": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "display-arcade": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "data-mono": ["18px", { "lineHeight": "1", "fontWeight": "500" }],
+                        "h2-hud": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "h1-hud": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-standard": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-bold": ["16px", { "lineHeight": "1.5", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .tetris-grid {
+            display: grid;
+            grid-template-columns: repeat(10, minmax(0, 1fr));
+            grid-template-rows: repeat(20, minmax(0, 1fr));
+            gap: 2px;
+            aspect-ratio: 10/20;
+            background-color: theme('colors.surface-container');
+            border: 1px solid theme('colors.primary-container');
+            padding: 2px;
+        }
+        .block-cell {
+            background-color: theme('colors.background');
+            border: 1px solid theme('colors.surface-container-high');
+        }
+        .block-active {
+            background-color: theme('colors.secondary');
+            box-shadow: 0 0 10px theme('colors.secondary-fixed-dim'), inset 0 0 5px theme('colors.secondary-fixed');
+            border: 1px solid theme('colors.secondary-fixed');
+        }
+        .block-ghost {
+            background-color: transparent;
+            border: 1px dashed theme('colors.secondary');
+        }
+        .block-placed {
+            background-color: theme('colors.primary-container');
+            border: 1px solid theme('colors.outline-variant');
+        }
+        .hud-module {
+            border: 1px solid theme('colors.primary-container');
+            background-color: theme('colors.surface-container');
+            padding: theme('spacing.md');
+            position: relative;
+        }
+        .hud-label {
+            position: absolute;
+            top: -6px;
+            left: 12px;
+            background-color: theme('colors.background');
+            padding: 0 4px;
+            color: theme('colors.primary-fixed-dim');
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-standard overflow-hidden selection:bg-secondary/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-lg py-md bg-surface dark:bg-surface border-b border-outline-variant dark:border-outline-variant hidden md:flex">
+<div class="font-display-arcade text-h1-hud text-secondary dark:text-secondary tracking-tighter">
+            TETRIS_SUPERVISOR
+        </div>
+<div class="flex items-center gap-sm">
+<button class="text-on-surface-variant dark:text-on-surface-variant hover:bg-primary-container/20 dark:hover:bg-primary-container/20 p-2 rounded-full flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="text-on-surface-variant dark:text-on-surface-variant hover:bg-primary-container/20 dark:hover:bg-primary-container/20 p-2 rounded-full flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+</header>
+<!-- SideNavBar (Desktop Only) -->
+<nav class="fixed left-0 top-0 h-full w-64 z-40 pt-24 bg-surface-container dark:bg-surface-container border-r border-outline-variant dark:border-outline-variant hidden md:flex flex-col">
+<div class="px-lg pb-md mb-md border-b border-outline-variant/30">
+<div class="font-display-arcade text-h2-hud text-primary dark:text-primary">SUPERVISOR_OS</div>
+<div class="font-label-compact text-label-compact text-on-surface-variant mt-1">V2.04_STABLE</div>
+</div>
+<div class="flex flex-col gap-xs flex-1">
+<a class="border-l-4 border-secondary text-secondary bg-secondary/10 px-md py-sm flex items-center gap-md font-label-compact text-label-compact" href="#">
+<span class="material-symbols-outlined">terminal</span>
+                Command
+            </a>
+<a class="text-on-surface-variant px-md py-sm opacity-70 hover:bg-surface-container-highest dark:hover:bg-surface-container-highest flex items-center gap-md font-label-compact text-label-compact border-l-4 border-transparent" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+                Leaderboard
+            </a>
+<a class="text-on-surface-variant px-md py-sm opacity-70 hover:bg-surface-container-highest dark:hover:bg-surface-container-highest flex items-center gap-md font-label-compact text-label-compact border-l-4 border-transparent" href="#">
+<span class="material-symbols-outlined">history</span>
+                Archive
+            </a>
+<a class="text-on-surface-variant px-md py-sm opacity-70 hover:bg-surface-container-highest dark:hover:bg-surface-container-highest flex items-center gap-md font-label-compact text-label-compact border-l-4 border-transparent mt-auto mb-md" href="#">
+<span class="material-symbols-outlined">settings</span>
+                Settings
+            </a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col pt-2 md:pt-24 md:pl-64 h-screen w-full relative z-10 pb-20 md:pb-0 px-4 md:px-xl items-center justify-center">
+<!-- Game Layout Container -->
+<div class="flex gap-lg h-full max-h-[800px] w-full max-w-container-max justify-center items-start pt-lg">
+<!-- Left Column: Hold & Stats -->
+<div class="hidden sm:flex flex-col gap-lg w-48 shrink-0">
+<!-- HOLD Module -->
+<div class="hud-module aspect-square flex items-center justify-center mt-6">
+<span class="hud-label font-label-compact text-label-compact">HOLD</span>
+<div class="grid grid-cols-4 grid-rows-2 gap-[2px] w-24 h-12">
+<!-- T piece held -->
+<div class="block-cell opacity-0"></div>
+<div class="block-active bg-primary box-shadow-none border-primary-fixed-dim" style="box-shadow: 0 0 10px theme('colors.primary-fixed-dim')"></div>
+<div class="block-cell opacity-0"></div>
+<div class="block-cell opacity-0"></div>
+<div class="block-active bg-primary border-primary-fixed-dim" style="box-shadow: 0 0 10px theme('colors.primary-fixed-dim')"></div>
+<div class="block-active bg-primary border-primary-fixed-dim" style="box-shadow: 0 0 10px theme('colors.primary-fixed-dim')"></div>
+<div class="block-active bg-primary border-primary-fixed-dim" style="box-shadow: 0 0 10px theme('colors.primary-fixed-dim')"></div>
+<div class="block-cell opacity-0"></div>
+</div>
+</div>
+<!-- STATS Module -->
+<div class="hud-module flex flex-col gap-md">
+<span class="hud-label font-label-compact text-label-compact">METRICS</span>
+<div class="flex flex-col">
+<span class="font-label-compact text-label-compact text-on-surface-variant">SCORE</span>
+<span class="font-data-mono text-data-mono text-secondary">014,500</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-compact text-label-compact text-on-surface-variant">LINES</span>
+<span class="font-data-mono text-data-mono">032</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-compact text-label-compact text-on-surface-variant">LEVEL</span>
+<span class="font-data-mono text-data-mono text-tertiary">04</span>
+<!-- Progress Bar -->
+<div class="w-full h-[4px] bg-surface mt-2">
+<div class="h-full bg-secondary w-3/4"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Center Column: Game Board -->
+<div class="h-full flex flex-col items-center">
+<!-- Mobile Score Header -->
+<div class="flex justify-between w-full mb-4 sm:hidden px-2">
+<div class="font-data-mono text-data-mono text-secondary">014,500</div>
+<div class="font-data-mono text-data-mono text-tertiary">LVL 04</div>
+</div>
+<div class="tetris-grid h-full max-h-full shrink-1">
+<!-- Row 1-14 (Empty mostly) -->
+<script>
+                        for(let i=0; i<140; i++) document.write('<div class="block-cell"></div>');
+                    </script>
+<!-- Row 15: Active Piece (S-Piece) -->
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<div class="block-active"></div>
+<div class="block-active"></div>
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<!-- Row 16 -->
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<div class="block-active"></div>
+<div class="block-active"></div>
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<!-- Row 17 (Ghost Piece) -->
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<div class="block-ghost"></div>
+<div class="block-ghost"></div>
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<!-- Row 18 -->
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<div class="block-ghost"></div>
+<div class="block-ghost"></div>
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<!-- Row 19 (Placed Blocks) -->
+<div class="block-placed"></div>
+<div class="block-placed"></div>
+<div class="block-cell"></div>
+<div class="block-cell"></div>
+<div class="block-placed"></div>
+<div class="block-placed"></div>
+<div class="block-placed"></div>
+<div class="block-cell"></div>
+<div class="block-placed"></div>
+<div class="block-placed"></div>
+<!-- Row 20 -->
+<div class="block-placed"></div>
+<div class="block-placed"></div>
+<div class="block-placed"></div>
+<div class="block-cell"></div>
+<div class="block-placed"></div>
+<div class="block-placed"></div>
+<div class="block-placed"></div>
+<div class="block-placed"></div>
+<div class="block-placed"></div>
+<div class="block-placed"></div>
+</div>
+</div>
+<!-- Right Column: Next & Actions -->
+<div class="hidden sm:flex flex-col gap-lg w-48 shrink-0">
+<!-- NEXT Module -->
+<div class="hud-module h-64 flex flex-col items-center justify-start gap-md mt-6">
+<span class="hud-label font-label-compact text-label-compact">NEXT</span>
+<!-- Next 1 (I piece) -->
+<div class="grid grid-cols-4 grid-rows-1 gap-[2px] w-24 h-6 mt-4">
+<div class="block-placed !bg-tertiary border-tertiary-fixed-dim" style="box-shadow: 0 0 5px theme('colors.tertiary')"></div>
+<div class="block-placed !bg-tertiary border-tertiary-fixed-dim" style="box-shadow: 0 0 5px theme('colors.tertiary')"></div>
+<div class="block-placed !bg-tertiary border-tertiary-fixed-dim" style="box-shadow: 0 0 5px theme('colors.tertiary')"></div>
+<div class="block-placed !bg-tertiary border-tertiary-fixed-dim" style="box-shadow: 0 0 5px theme('colors.tertiary')"></div>
+</div>
+<!-- Next 2 (O piece) -->
+<div class="grid grid-cols-2 grid-rows-2 gap-[2px] w-12 h-12 mt-4 opacity-70">
+<div class="block-placed !bg-error border-error-container"></div>
+<div class="block-placed !bg-error border-error-container"></div>
+<div class="block-placed !bg-error border-error-container"></div>
+<div class="block-placed !bg-error border-error-container"></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-md pb-sm pt-xs bg-surface-container-low dark:bg-surface-container-low border-t-2 border-outline-variant dark:border-outline-variant rounded-t-xl md:hidden">
+<button class="flex flex-col items-center justify-center text-on-surface-variant p-2 opacity-60 hover:bg-surface-container-high dark:hover:bg-surface-container-high transition-transform">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">rotate_right</span>
+<span class="font-label-compact text-label-compact">Rotate</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant p-2 opacity-60 hover:bg-surface-container-high dark:hover:bg-surface-container-high transition-transform">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+<span class="font-label-compact text-label-compact">Hold</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-secondary/20 text-secondary rounded-lg p-2 border border-secondary/50 hover:bg-surface-container-high dark:hover:bg-surface-container-high transition-transform scale-90">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">keyboard_double_arrow_down</span>
+<span class="font-label-compact text-label-compact">Drop</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant p-2 opacity-60 hover:bg-surface-container-high dark:hover:bg-surface-container-high transition-transform">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">pause_circle</span>
+<span class="font-label-compact text-label-compact">Pause</span>
+</button>
+</nav>
+</body></html>

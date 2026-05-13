@@ -1,0 +1,38 @@
+[
+  {
+    "screenId": "d448c39c04f14497a57ce3c05d24dd6d",
+    "name": "Game Board",
+    "type": "game",
+    "description": "Game Board - Tetris Supervisor screen"
+  },
+  {
+    "screenId": "c31b03ee843d4fcbaa671d767099dc8c",
+    "name": "Main Menu",
+    "type": "menu",
+    "description": "Main Menu - Tetris Supervisor screen"
+  },
+  {
+    "screenId": "5fa85f0cbce74072aa5dcbdb4b91cb54",
+    "name": "Pause Overlay",
+    "type": "app-screen",
+    "description": "Pause Overlay - Tetris Supervisor screen"
+  },
+  {
+    "screenId": "48010fd59c1d4f8db38814b4d1a5ba32",
+    "name": "Game Over",
+    "type": "game",
+    "description": "Game Over - Tetris Supervisor screen"
+  },
+  {
+    "screenId": "e29f1c1d70414abf856e26cac390b508",
+    "name": "Controls Help",
+    "type": "app-screen",
+    "description": "Controls Help - Tetris Supervisor screen"
+  },
+  {
+    "screenId": "26175aa4344f4983b9f553e945e96ade",
+    "name": "Game Options",
+    "type": "game",
+    "description": "Game Options - Tetris Supervisor screen"
+  }
+]

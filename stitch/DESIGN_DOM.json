@@ -1,0 +1,1932 @@
+{
+  "generatedAt": "2026-05-13T12:15:41.117Z",
+  "screenCount": 6,
+  "screens": {
+    "26175aa4344f4983b9f553e945e96ade": {
+      "screenId": "26175aa4344f4983b9f553e945e96ade",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "flex-col",
+          "classes": [
+            "hidden",
+            "md:flex",
+            "flex-col",
+            "bg-surface-container",
+            "dark:bg-surface-container",
+            "docked",
+            "left-0",
+            "h-full",
+            "w-64",
+            "border-r"
+          ],
+          "childCount": 2
+        },
+        {
+          "tag": "main",
+          "layout": "flex-row",
+          "classes": [
+            "flex-grow",
+            "p-lg",
+            "md:p-xl",
+            "flex",
+            "justify-center",
+            "items-start"
+          ],
+          "childCount": 18
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Save & Exit",
+          "classes": [
+            "bg-transparent",
+            "border-2",
+            "border-secondary",
+            "text-secondary",
+            "font-label-compact",
+            "text-label-compact",
+            "px-xl",
+            "py-sm",
+            "uppercase",
+            "tracking-widest",
+            "hover:bg-secondary/10",
+            "transition-colors",
+            "focus:outline-none",
+            "focus:ring-2",
+            "focus:ring-secondary",
+            "focus:ring-offset-2",
+            "focus:ring-offset-background",
+            "active:bg-on-surface",
+            "active:text-background"
+          ],
+          "icon": null,
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "button",
+          "label": "SUPERVISOR_OS V2.04_STABLE",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "checkbox",
+          "label": "checkbox",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "sr-only",
+            "switch-peer"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "range",
+          "label": "range",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "w-full",
+            "h-2",
+            "bg-surface-container-highest",
+            "rounded-lg",
+            "appearance-none",
+            "cursor-pointer",
+            "accent-secondary"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "Command",
+          "href": "#",
+          "classes": [
+            "font-label-compact",
+            "text-label-compact"
+          ],
+          "icon": "terminal",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "leaderboard",
+          "href": "#",
+          "classes": [
+            "font-label-compact",
+            "text-label-compact"
+          ],
+          "icon": "leaderboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Archive",
+          "href": "#",
+          "classes": [
+            "font-label-compact",
+            "text-label-compact"
+          ],
+          "icon": "history",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "font-label-compact",
+            "text-label-compact"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "terminal",
+        "leaderboard",
+        "history",
+        "settings"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "primary-fixed-dim": "#b9c7e0",
+        "on-secondary-container": "#004119",
+        "error-container": "#93000a",
+        "surface-container-high": "#2a2a2b",
+        "on-primary-fixed-variant": "#3a485c",
+        "on-surface": "#e4e2e4",
+        "primary": "#b9c7e0",
+        "on-background": "#e4e2e4",
+        "tertiary-container": "#503d1e",
+        "surface-container": "#1f1f21",
+        "tertiary": "#dfc299",
+        "error": "#ffb4ab",
+        "on-secondary-fixed-variant": "#005321",
+        "inverse-primary": "#515f74",
+        "on-surface-variant": "#c5c6cd",
+        "inverse-surface": "#e4e2e4",
+        "secondary-fixed": "#6bff8f",
+        "on-tertiary-fixed-variant": "#574424",
+        "surface-container-highest": "#343536",
+        "surface-tint": "#b9c7e0",
+        "on-tertiary-container": "#c3a881",
+        "primary-container": "#334155",
+        "surface-variant": "#343536",
+        "surface": "#131315",
+        "on-secondary": "#003915",
+        "on-tertiary-fixed": "#281901",
+        "on-primary": "#233144",
+        "tertiary-fixed-dim": "#dfc299",
+        "tertiary-fixed": "#fcdeb3",
+        "surface-container-low": "#1b1b1d",
+        "inverse-on-surface": "#303032",
+        "primary-fixed": "#d5e3fd",
+        "outline": "#8e9197",
+        "surface-dim": "#131315",
+        "on-secondary-fixed": "#002109",
+        "surface-bright": "#39393b",
+        "surface-container-lowest": "#0e0e10",
+        "on-primary-fixed": "#0d1c2f",
+        "on-error-container": "#ffdad6",
+        "secondary-fixed-dim": "#4ae176",
+        "on-tertiary": "#3f2d10",
+        "on-error": "#690005",
+        "background": "#131315",
+        "secondary": "#4ae176",
+        "on-primary-container": "#9eadc5",
+        "secondary-container": "#00b954",
+        "outline-variant": "#44474c"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Hanken Grotesk",
+        "Inter",
+        "JetBrains Mono"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "Command",
+          "icon": "terminal",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "leaderboard",
+          "icon": "leaderboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Archive",
+          "icon": "history",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "Save & Exit",
+          "icon": null,
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "button",
+          "label": "SUPERVISOR_OS V2.04_STABLE",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "checkbox",
+          "type": "checkbox",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "range",
+          "type": "range",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "SUPERVISOR_OS V2.04_STABLE",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Command",
+          "icon": "terminal",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "leaderboard",
+          "icon": "leaderboard",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Archive",
+          "icon": "history",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": false
+        }
+      ],
+      "title": "Game Options - Tetris Supervisor"
+    },
+    "48010fd59c1d4f8db38814b4d1a5ba32": {
+      "screenId": "48010fd59c1d4f8db38814b4d1a5ba32",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "main",
+          "layout": "flex-row",
+          "classes": [
+            "relative",
+            "z-10",
+            "flex-1",
+            "flex",
+            "items-center",
+            "justify-center",
+            "p-md",
+            "md:p-xl"
+          ],
+          "childCount": 15
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Replay Game",
+          "classes": [
+            "bg-transparent",
+            "border-[2px]",
+            "border-secondary",
+            "text-secondary",
+            "hover:bg-secondary/10",
+            "px-lg",
+            "py-md",
+            "font-label-compact",
+            "text-label-compact",
+            "uppercase",
+            "tracking-widest",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-sm",
+            "transition-colors",
+            "duration-150",
+            "active:bg-secondary/30",
+            "glow-secondary",
+            "focus:outline-none",
+            "focus:ring-2",
+            "focus:ring-secondary",
+            "focus:ring-offset-4",
+            "focus:ring-offset-background"
+          ],
+          "icon": "refresh",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Score",
+          "classes": [
+            "bg-transparent",
+            "border",
+            "border-outline",
+            "text-on-surface",
+            "hover:bg-surface-container-high",
+            "px-lg",
+            "py-md",
+            "font-label-compact",
+            "text-label-compact",
+            "uppercase",
+            "tracking-widest",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-sm",
+            "transition-colors",
+            "duration-150",
+            "active:bg-surface-container-highest",
+            "focus:outline-none",
+            "focus:ring-2",
+            "focus:ring-secondary",
+            "focus:ring-offset-4",
+            "focus:ring-offset-background"
+          ],
+          "icon": "share",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Main Menu",
+          "classes": [
+            "bg-transparent",
+            "border",
+            "border-outline",
+            "text-on-surface",
+            "hover:bg-surface-container-high",
+            "px-lg",
+            "py-md",
+            "font-label-compact",
+            "text-label-compact",
+            "uppercase",
+            "tracking-widest",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-sm",
+            "transition-colors",
+            "duration-150",
+            "active:bg-surface-container-highest",
+            "focus:outline-none",
+            "focus:ring-2",
+            "focus:ring-secondary",
+            "focus:ring-offset-4",
+            "focus:ring-offset-background"
+          ],
+          "icon": "home",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/",
+          "expectedRoute": "/",
+          "routeInferred": true
+        }
+      ],
+      "inputs": [],
+      "navLinks": [],
+      "cards": [],
+      "icons": [
+        "trending_up",
+        "refresh",
+        "share",
+        "home"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "primary-fixed-dim": "#b9c7e0",
+        "on-secondary-container": "#004119",
+        "error-container": "#93000a",
+        "surface-container-high": "#2a2a2b",
+        "on-primary-fixed-variant": "#3a485c",
+        "on-surface": "#e4e2e4",
+        "primary": "#b9c7e0",
+        "on-background": "#e4e2e4",
+        "tertiary-container": "#503d1e",
+        "surface-container": "#1f1f21",
+        "tertiary": "#dfc299",
+        "error": "#ffb4ab",
+        "on-secondary-fixed-variant": "#005321",
+        "inverse-primary": "#515f74",
+        "on-surface-variant": "#c5c6cd",
+        "inverse-surface": "#e4e2e4",
+        "secondary-fixed": "#6bff8f",
+        "on-tertiary-fixed-variant": "#574424",
+        "surface-container-highest": "#343536",
+        "surface-tint": "#b9c7e0",
+        "on-tertiary-container": "#c3a881",
+        "primary-container": "#334155",
+        "surface-variant": "#343536",
+        "surface": "#131315",
+        "on-secondary": "#003915",
+        "on-tertiary-fixed": "#281901",
+        "on-primary": "#233144",
+        "tertiary-fixed-dim": "#dfc299",
+        "tertiary-fixed": "#fcdeb3",
+        "surface-container-low": "#1b1b1d",
+        "inverse-on-surface": "#303032",
+        "primary-fixed": "#d5e3fd",
+        "outline": "#8e9197",
+        "surface-dim": "#131315",
+        "on-secondary-fixed": "#002109",
+        "surface-bright": "#39393b",
+        "surface-container-lowest": "#0e0e10",
+        "on-primary-fixed": "#0d1c2f",
+        "on-error-container": "#ffdad6",
+        "secondary-fixed-dim": "#4ae176",
+        "on-tertiary": "#3f2d10",
+        "on-error": "#690005",
+        "background": "#131315",
+        "secondary": "#4ae176",
+        "on-primary-container": "#9eadc5",
+        "secondary-container": "#00b954",
+        "outline-variant": "#44474c"
+      },
+      "fonts": [
+        "Hanken Grotesk",
+        "Inter",
+        "JetBrains Mono",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col"
+      },
+      "behaviorContract": [
+        {
+          "kind": "button",
+          "label": "Replay Game",
+          "icon": "refresh",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Score",
+          "icon": "share",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Main Menu",
+          "icon": "home",
+          "action": "navigate",
+          "route": "/",
+          "expectedBehavior": "navigate:/"
+        }
+      ],
+      "tabBar": [],
+      "title": "Game Over - Tetris Supervisor"
+    },
+    "5fa85f0cbce74072aa5dcbdb4b91cb54": {
+      "screenId": "5fa85f0cbce74072aa5dcbdb4b91cb54",
+      "materialSymbolsRequired": true,
+      "sections": [],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Resume",
+          "classes": [
+            "w-full",
+            "h-14",
+            "bg-transparent",
+            "border-2",
+            "border-secondary",
+            "text-secondary",
+            "font-h2-hud",
+            "text-h2-hud",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-sm",
+            "hover:bg-secondary/10",
+            "hover:shadow-[0_0_15px_rgba(74,225,118,0.3)]",
+            "transition-all",
+            "duration-150",
+            "active:bg-secondary/30",
+            "active:scale-[0.98]",
+            "rounded",
+            "group"
+          ],
+          "icon": "play_arrow",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Restart",
+          "classes": [
+            "w-full",
+            "h-12",
+            "bg-transparent",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "font-body-bold",
+            "text-body-bold",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-sm",
+            "hover:bg-surface-container-highest",
+            "hover:border-outline",
+            "transition-all",
+            "duration-150",
+            "active:scale-[0.98]",
+            "rounded"
+          ],
+          "icon": "refresh",
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "Return to Main Menu",
+          "classes": [
+            "w-full",
+            "h-12",
+            "bg-transparent",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "font-body-bold",
+            "text-body-bold",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-sm",
+            "hover:bg-surface-container-highest",
+            "hover:border-outline",
+            "transition-all",
+            "duration-150",
+            "active:scale-[0.98]",
+            "rounded"
+          ],
+          "icon": "logout",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/logout",
+          "expectedRoute": "/logout",
+          "routeInferred": true
+        }
+      ],
+      "inputs": [],
+      "navLinks": [],
+      "cards": [],
+      "icons": [
+        "pause_circle",
+        "play_arrow",
+        "refresh",
+        "logout"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "primary-fixed-dim": "#b9c7e0",
+        "on-secondary-container": "#004119",
+        "error-container": "#93000a",
+        "surface-container-high": "#2a2a2b",
+        "on-primary-fixed-variant": "#3a485c",
+        "on-surface": "#e4e2e4",
+        "primary": "#b9c7e0",
+        "on-background": "#e4e2e4",
+        "tertiary-container": "#503d1e",
+        "surface-container": "#1f1f21",
+        "tertiary": "#dfc299",
+        "error": "#ffb4ab",
+        "on-secondary-fixed-variant": "#005321",
+        "inverse-primary": "#515f74",
+        "on-surface-variant": "#c5c6cd",
+        "inverse-surface": "#e4e2e4",
+        "secondary-fixed": "#6bff8f",
+        "on-tertiary-fixed-variant": "#574424",
+        "surface-container-highest": "#343536",
+        "surface-tint": "#b9c7e0",
+        "on-tertiary-container": "#c3a881",
+        "primary-container": "#334155",
+        "surface-variant": "#343536",
+        "surface": "#131315",
+        "on-secondary": "#003915",
+        "on-tertiary-fixed": "#281901",
+        "on-primary": "#233144",
+        "tertiary-fixed-dim": "#dfc299",
+        "tertiary-fixed": "#fcdeb3",
+        "surface-container-low": "#1b1b1d",
+        "inverse-on-surface": "#303032",
+        "primary-fixed": "#d5e3fd",
+        "outline": "#8e9197",
+        "surface-dim": "#131315",
+        "on-secondary-fixed": "#002109",
+        "surface-bright": "#39393b",
+        "surface-container-lowest": "#0e0e10",
+        "on-primary-fixed": "#0d1c2f",
+        "on-error-container": "#ffdad6",
+        "secondary-fixed-dim": "#4ae176",
+        "on-tertiary": "#3f2d10",
+        "on-error": "#690005",
+        "background": "#131315",
+        "secondary": "#4ae176",
+        "on-primary-container": "#9eadc5",
+        "secondary-container": "#00b954",
+        "outline-variant": "#44474c"
+      },
+      "fonts": [
+        "JetBrains Mono",
+        "Hanken Grotesk",
+        "Inter",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 2,
+        "flexDirection": "col"
+      },
+      "behaviorContract": [
+        {
+          "kind": "button",
+          "label": "Resume",
+          "icon": "play_arrow",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Restart",
+          "icon": "refresh",
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "Return to Main Menu",
+          "icon": "logout",
+          "action": "navigate",
+          "route": "/logout",
+          "expectedBehavior": "navigate:/logout"
+        }
+      ],
+      "tabBar": [],
+      "title": "Pause Overlay - Tetris Supervisor"
+    },
+    "c31b03ee843d4fcbaa671d767099dc8c": {
+      "screenId": "c31b03ee843d4fcbaa671d767099dc8c",
+      "materialSymbolsRequired": true,
+      "sections": [],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "START_GAME",
+          "classes": [
+            "relative",
+            "group",
+            "w-full",
+            "flex",
+            "items-center",
+            "justify-between",
+            "px-lg",
+            "py-md",
+            "border-2",
+            "border-secondary",
+            "bg-transparent",
+            "hover:bg-secondary/10",
+            "transition-colors",
+            "duration-100",
+            "rounded",
+            "focus:outline-none",
+            "focus:ring-2",
+            "focus:ring-secondary",
+            "focus:ring-offset-4",
+            "focus:ring-offset-background"
+          ],
+          "icon": "play_arrow",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "HIGH_SCORES",
+          "classes": [
+            "relative",
+            "group",
+            "w-full",
+            "flex",
+            "items-center",
+            "justify-between",
+            "px-lg",
+            "py-md",
+            "border",
+            "border-outline-variant",
+            "bg-surface/50",
+            "hover:bg-surface-container-high",
+            "transition-colors",
+            "duration-100",
+            "rounded",
+            "focus:outline-none",
+            "focus:ring-2",
+            "focus:ring-secondary",
+            "focus:ring-offset-4",
+            "focus:ring-offset-background"
+          ],
+          "icon": "leaderboard",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "settings",
+          "classes": [
+            "relative",
+            "group",
+            "w-full",
+            "flex",
+            "items-center",
+            "justify-between",
+            "px-lg",
+            "py-md",
+            "border",
+            "border-outline-variant",
+            "bg-surface/50",
+            "hover:bg-surface-container-high",
+            "transition-colors",
+            "duration-100",
+            "rounded",
+            "focus:outline-none",
+            "focus:ring-2",
+            "focus:ring-secondary",
+            "focus:ring-offset-4",
+            "focus:ring-offset-background"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/settings",
+          "expectedRoute": "/settings",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "HELP",
+          "classes": [
+            "relative",
+            "group",
+            "w-full",
+            "flex",
+            "items-center",
+            "justify-between",
+            "px-lg",
+            "py-md",
+            "border",
+            "border-outline-variant",
+            "bg-surface/50",
+            "hover:bg-surface-container-high",
+            "transition-colors",
+            "duration-100",
+            "rounded",
+            "focus:outline-none",
+            "focus:ring-2",
+            "focus:ring-secondary",
+            "focus:ring-offset-4",
+            "focus:ring-offset-background"
+          ],
+          "icon": "help_outline",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [],
+      "cards": [],
+      "icons": [
+        "play_arrow",
+        "leaderboard",
+        "settings",
+        "help_outline"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "primary-fixed-dim": "#b9c7e0",
+        "on-secondary-container": "#004119",
+        "error-container": "#93000a",
+        "surface-container-high": "#2a2a2b",
+        "on-primary-fixed-variant": "#3a485c",
+        "on-surface": "#e4e2e4",
+        "primary": "#b9c7e0",
+        "on-background": "#e4e2e4",
+        "tertiary-container": "#503d1e",
+        "surface-container": "#1f1f21",
+        "tertiary": "#dfc299",
+        "error": "#ffb4ab",
+        "on-secondary-fixed-variant": "#005321",
+        "inverse-primary": "#515f74",
+        "on-surface-variant": "#c5c6cd",
+        "inverse-surface": "#e4e2e4",
+        "secondary-fixed": "#6bff8f",
+        "on-tertiary-fixed-variant": "#574424",
+        "surface-container-highest": "#343536",
+        "surface-tint": "#b9c7e0",
+        "on-tertiary-container": "#c3a881",
+        "primary-container": "#334155",
+        "surface-variant": "#343536",
+        "surface": "#131315",
+        "on-secondary": "#003915",
+        "on-tertiary-fixed": "#281901",
+        "on-primary": "#233144",
+        "tertiary-fixed-dim": "#dfc299",
+        "tertiary-fixed": "#fcdeb3",
+        "surface-container-low": "#1b1b1d",
+        "inverse-on-surface": "#303032",
+        "primary-fixed": "#d5e3fd",
+        "outline": "#8e9197",
+        "surface-dim": "#131315",
+        "on-secondary-fixed": "#002109",
+        "surface-bright": "#39393b",
+        "surface-container-lowest": "#0e0e10",
+        "on-primary-fixed": "#0d1c2f",
+        "on-error-container": "#ffdad6",
+        "secondary-fixed-dim": "#4ae176",
+        "on-tertiary": "#3f2d10",
+        "on-error": "#690005",
+        "background": "#131315",
+        "secondary": "#4ae176",
+        "on-primary-container": "#9eadc5",
+        "secondary-container": "#00b954",
+        "outline-variant": "#44474c"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Hanken Grotesk",
+        "Inter",
+        "JetBrains Mono"
+      ],
+      "layoutHints": {
+        "flexDirection": "col"
+      },
+      "behaviorContract": [
+        {
+          "kind": "button",
+          "label": "START_GAME",
+          "icon": "play_arrow",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "HIGH_SCORES",
+          "icon": "leaderboard",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "settings",
+          "icon": "settings",
+          "action": "navigate",
+          "route": "/settings",
+          "expectedBehavior": "navigate:/settings"
+        },
+        {
+          "kind": "button",
+          "label": "HELP",
+          "icon": "help_outline",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "tabBar": [],
+      "title": "Main Menu - Tetris Supervisor"
+    },
+    "d448c39c04f14497a57ce3c05d24dd6d": {
+      "screenId": "d448c39c04f14497a57ce3c05d24dd6d",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "fixed",
+            "top-0",
+            "left-0",
+            "w-full",
+            "z-50",
+            "flex",
+            "justify-between",
+            "items-center",
+            "px-lg",
+            "py-md"
+          ],
+          "childCount": 2
+        },
+        {
+          "tag": "nav",
+          "layout": "absolute",
+          "classes": [
+            "fixed",
+            "left-0",
+            "top-0",
+            "h-full",
+            "w-64",
+            "z-40",
+            "pt-24",
+            "bg-surface-container",
+            "dark:bg-surface-container",
+            "border-r"
+          ],
+          "childCount": 4
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "flex-1",
+            "flex",
+            "flex-col",
+            "pt-2",
+            "md:pt-24",
+            "md:pl-64",
+            "h-screen",
+            "w-full",
+            "relative",
+            "z-10"
+          ],
+          "childCount": 96
+        },
+        {
+          "tag": "nav",
+          "layout": "flex-row",
+          "classes": [
+            "fixed",
+            "bottom-0",
+            "left-0",
+            "w-full",
+            "z-50",
+            "flex",
+            "justify-around",
+            "items-center",
+            "px-md",
+            "pb-sm"
+          ],
+          "childCount": 0
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "settings",
+          "classes": [
+            "text-on-surface-variant",
+            "dark:text-on-surface-variant",
+            "hover:bg-primary-container/20",
+            "dark:hover:bg-primary-container/20",
+            "p-2",
+            "rounded-full",
+            "flex",
+            "items-center",
+            "justify-center",
+            "transition-colors"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#",
+          "expectedRoute": "#"
+        },
+        {
+          "kind": "button",
+          "label": "help_outline",
+          "classes": [
+            "text-on-surface-variant",
+            "dark:text-on-surface-variant",
+            "hover:bg-primary-container/20",
+            "dark:hover:bg-primary-container/20",
+            "p-2",
+            "rounded-full",
+            "flex",
+            "items-center",
+            "justify-center",
+            "transition-colors"
+          ],
+          "icon": "help_outline",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Rotate",
+          "classes": [
+            "flex",
+            "flex-col",
+            "items-center",
+            "justify-center",
+            "text-on-surface-variant",
+            "p-2",
+            "opacity-60",
+            "hover:bg-surface-container-high",
+            "dark:hover:bg-surface-container-high",
+            "transition-transform"
+          ],
+          "icon": "rotate_right",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Hold",
+          "classes": [
+            "flex",
+            "flex-col",
+            "items-center",
+            "justify-center",
+            "text-on-surface-variant",
+            "p-2",
+            "opacity-60",
+            "hover:bg-surface-container-high",
+            "dark:hover:bg-surface-container-high",
+            "transition-transform"
+          ],
+          "icon": "inventory_2",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Drop",
+          "classes": [
+            "flex",
+            "flex-col",
+            "items-center",
+            "justify-center",
+            "bg-secondary/20",
+            "text-secondary",
+            "rounded-lg",
+            "p-2",
+            "border",
+            "border-secondary/50",
+            "hover:bg-surface-container-high",
+            "dark:hover:bg-surface-container-high",
+            "transition-transform",
+            "scale-90"
+          ],
+          "icon": "keyboard_double_arrow_down",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Pause",
+          "classes": [
+            "flex",
+            "flex-col",
+            "items-center",
+            "justify-center",
+            "text-on-surface-variant",
+            "p-2",
+            "opacity-60",
+            "hover:bg-surface-container-high",
+            "dark:hover:bg-surface-container-high",
+            "transition-transform"
+          ],
+          "icon": "pause_circle",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "SUPERVISOR_OS",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "V2.04_STABLE",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "Command",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "terminal",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "leaderboard",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "leaderboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Archive",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "history",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "settings",
+        "help_outline",
+        "terminal",
+        "leaderboard",
+        "history",
+        "rotate_right",
+        "keyboard_double_arrow_down",
+        "pause_circle"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "primary-fixed-dim": "#b9c7e0",
+        "on-secondary-container": "#004119",
+        "error-container": "#93000a",
+        "surface-container-high": "#2a2a2b",
+        "on-primary-fixed-variant": "#3a485c",
+        "on-surface": "#e4e2e4",
+        "primary": "#b9c7e0",
+        "on-background": "#e4e2e4",
+        "tertiary-container": "#503d1e",
+        "surface-container": "#1f1f21",
+        "tertiary": "#dfc299",
+        "error": "#ffb4ab",
+        "on-secondary-fixed-variant": "#005321",
+        "inverse-primary": "#515f74",
+        "on-surface-variant": "#c5c6cd",
+        "inverse-surface": "#e4e2e4",
+        "secondary-fixed": "#6bff8f",
+        "on-tertiary-fixed-variant": "#574424",
+        "surface-container-highest": "#343536",
+        "surface-tint": "#b9c7e0",
+        "on-tertiary-container": "#c3a881",
+        "primary-container": "#334155",
+        "surface-variant": "#343536",
+        "surface": "#131315",
+        "on-secondary": "#003915",
+        "on-tertiary-fixed": "#281901",
+        "on-primary": "#233144",
+        "tertiary-fixed-dim": "#dfc299",
+        "tertiary-fixed": "#fcdeb3",
+        "surface-container-low": "#1b1b1d",
+        "inverse-on-surface": "#303032",
+        "primary-fixed": "#d5e3fd",
+        "outline": "#8e9197",
+        "surface-dim": "#131315",
+        "on-secondary-fixed": "#002109",
+        "surface-bright": "#39393b",
+        "surface-container-lowest": "#0e0e10",
+        "on-primary-fixed": "#0d1c2f",
+        "on-error-container": "#ffdad6",
+        "secondary-fixed-dim": "#4ae176",
+        "on-tertiary": "#3f2d10",
+        "on-error": "#690005",
+        "background": "#131315",
+        "secondary": "#4ae176",
+        "on-primary-container": "#9eadc5",
+        "secondary-container": "#00b954",
+        "outline-variant": "#44474c"
+      },
+      "fonts": [
+        "Hanken Grotesk",
+        "Inter",
+        "JetBrains Mono",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 4,
+        "flexDirection": "col"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "Command",
+          "icon": "terminal",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "leaderboard",
+          "icon": "leaderboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Archive",
+          "icon": "history",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "settings",
+          "icon": "settings",
+          "action": "navigate",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "help_outline",
+          "icon": "help_outline",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Rotate",
+          "icon": "rotate_right",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Hold",
+          "icon": "inventory_2",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Drop",
+          "icon": "keyboard_double_arrow_down",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Pause",
+          "icon": "pause_circle",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "SUPERVISOR_OS",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "V2.04_STABLE",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "SUPERVISOR_OS",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "V2.04_STABLE",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Command",
+          "icon": "terminal",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "leaderboard",
+          "icon": "leaderboard",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Archive",
+          "icon": "history",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Rotate",
+          "icon": "rotate_right",
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Hold",
+          "icon": "inventory_2",
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Drop",
+          "icon": "keyboard_double_arrow_down",
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Pause",
+          "icon": "pause_circle",
+          "active": false
+        }
+      ],
+      "title": "Game Board - Tetris Supervisor"
+    },
+    "e29f1c1d70414abf856e26cac390b508": {
+      "screenId": "e29f1c1d70414abf856e26cac390b508",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "bg-surface",
+            "dark:bg-surface",
+            "fixed",
+            "top-0",
+            "left-0",
+            "w-full",
+            "z-50",
+            "flex",
+            "justify-between",
+            "items-center"
+          ],
+          "childCount": 2
+        },
+        {
+          "tag": "nav",
+          "layout": "flex-col",
+          "classes": [
+            "hidden",
+            "md:flex",
+            "bg-surface-container",
+            "dark:bg-surface-container",
+            "flex-col",
+            "border-r",
+            "border-outline-variant",
+            "dark:border-outline-variant",
+            "fixed",
+            "left-0"
+          ],
+          "childCount": 7
+        },
+        {
+          "tag": "main",
+          "layout": "flex-row",
+          "classes": [
+            "flex-1",
+            "md:ml-64",
+            "p-lg",
+            "md:p-xl",
+            "flex",
+            "justify-center",
+            "items-center"
+          ],
+          "childCount": 40
+        },
+        {
+          "tag": "nav",
+          "layout": "flex-row",
+          "classes": [
+            "md:hidden",
+            "bg-surface-container-low",
+            "dark:bg-surface-container-low",
+            "fixed",
+            "bottom-0",
+            "left-0",
+            "w-full",
+            "z-50",
+            "flex",
+            "justify-around"
+          ],
+          "childCount": 0
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "settings",
+          "classes": [
+            "text-on-surface-variant",
+            "dark:text-on-surface-variant",
+            "hover:bg-primary-container/20",
+            "dark:hover:bg-primary-container/20",
+            "p-2",
+            "rounded-full",
+            "transition-colors"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#",
+          "expectedRoute": "#"
+        },
+        {
+          "kind": "button",
+          "label": "help_outline",
+          "classes": [
+            "text-on-surface-variant",
+            "dark:text-on-surface-variant",
+            "hover:bg-primary-container/20",
+            "dark:hover:bg-primary-container/20",
+            "p-2",
+            "rounded-full",
+            "transition-colors"
+          ],
+          "icon": "help_outline",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "BACK_TO_MENU",
+          "classes": [
+            "bg-transparent",
+            "border",
+            "border-outline",
+            "text-on-surface",
+            "hover:bg-surface-container-highest",
+            "font-label-compact",
+            "text-label-compact",
+            "px-lg",
+            "py-sm",
+            "flex",
+            "items-center",
+            "gap-sm",
+            "transition-colors",
+            "uppercase"
+          ],
+          "icon": "arrow_back",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "SUPERVISOR_OS",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "V2.04_STABLE",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "Command",
+          "href": "#",
+          "classes": [
+            "font-label-compact",
+            "text-label-compact"
+          ],
+          "icon": "terminal",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "leaderboard",
+          "href": "#",
+          "classes": [
+            "font-label-compact",
+            "text-label-compact"
+          ],
+          "icon": "leaderboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Archive",
+          "href": "#",
+          "classes": [
+            "font-label-compact",
+            "text-label-compact"
+          ],
+          "icon": "history",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "font-label-compact",
+            "text-label-compact"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Rotate",
+          "href": "#",
+          "classes": [
+            "font-label-compact",
+            "text-label-compact",
+            "text-[10px]"
+          ],
+          "icon": "rotate_right",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Hold",
+          "href": "#",
+          "classes": [
+            "font-label-compact",
+            "text-label-compact",
+            "text-[10px]"
+          ],
+          "icon": "inventory_2",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Drop",
+          "href": "#",
+          "classes": [
+            "font-label-compact",
+            "text-label-compact",
+            "text-[10px]"
+          ],
+          "icon": "keyboard_double_arrow_down",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Pause",
+          "href": "#",
+          "classes": [
+            "font-label-compact",
+            "text-label-compact",
+            "text-[10px]"
+          ],
+          "icon": "pause_circle",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "settings",
+        "help_outline",
+        "terminal",
+        "leaderboard",
+        "history",
+        "arrow_back",
+        "arrow_upward",
+        "arrow_downward",
+        "arrow_forward",
+        "bolt",
+        "repeat",
+        "rotate_right",
+        "keyboard_double_arrow_down",
+        "pause_circle"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "primary-fixed-dim": "#b9c7e0",
+        "on-secondary-container": "#004119",
+        "error-container": "#93000a",
+        "surface-container-high": "#2a2a2b",
+        "on-primary-fixed-variant": "#3a485c",
+        "on-surface": "#e4e2e4",
+        "primary": "#b9c7e0",
+        "on-background": "#e4e2e4",
+        "tertiary-container": "#503d1e",
+        "surface-container": "#1f1f21",
+        "tertiary": "#dfc299",
+        "error": "#ffb4ab",
+        "on-secondary-fixed-variant": "#005321",
+        "inverse-primary": "#515f74",
+        "on-surface-variant": "#c5c6cd",
+        "inverse-surface": "#e4e2e4",
+        "secondary-fixed": "#6bff8f",
+        "on-tertiary-fixed-variant": "#574424",
+        "surface-container-highest": "#343536",
+        "surface-tint": "#b9c7e0",
+        "on-tertiary-container": "#c3a881",
+        "primary-container": "#334155",
+        "surface-variant": "#343536",
+        "surface": "#131315",
+        "on-secondary": "#003915",
+        "on-tertiary-fixed": "#281901",
+        "on-primary": "#233144",
+        "tertiary-fixed-dim": "#dfc299",
+        "tertiary-fixed": "#fcdeb3",
+        "surface-container-low": "#1b1b1d",
+        "inverse-on-surface": "#303032",
+        "primary-fixed": "#d5e3fd",
+        "outline": "#8e9197",
+        "surface-dim": "#131315",
+        "on-secondary-fixed": "#002109",
+        "surface-bright": "#39393b",
+        "surface-container-lowest": "#0e0e10",
+        "on-primary-fixed": "#0d1c2f",
+        "on-error-container": "#ffdad6",
+        "secondary-fixed-dim": "#4ae176",
+        "on-tertiary": "#3f2d10",
+        "on-error": "#690005",
+        "background": "#131315",
+        "secondary": "#4ae176",
+        "on-primary-container": "#9eadc5",
+        "secondary-container": "#00b954",
+        "outline-variant": "#44474c"
+      },
+      "fonts": [
+        "Hanken Grotesk",
+        "Inter",
+        "JetBrains Mono",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "Command",
+          "icon": "terminal",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "leaderboard",
+          "icon": "leaderboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Archive",
+          "icon": "history",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Rotate",
+          "icon": "rotate_right",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Hold",
+          "icon": "inventory_2",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Drop",
+          "icon": "keyboard_double_arrow_down",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Pause",
+          "icon": "pause_circle",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "settings",
+          "icon": "settings",
+          "action": "navigate",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "help_outline",
+          "icon": "help_outline",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "BACK_TO_MENU",
+          "icon": "arrow_back",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "SUPERVISOR_OS",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "V2.04_STABLE",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "SUPERVISOR_OS",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "V2.04_STABLE",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Command",
+          "icon": "terminal",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "leaderboard",
+          "icon": "leaderboard",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Archive",
+          "icon": "history",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Rotate",
+          "icon": "rotate_right",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Hold",
+          "icon": "inventory_2",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Drop",
+          "icon": "keyboard_double_arrow_down",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Pause",
+          "icon": "pause_circle",
+          "route": "#",
+          "active": false
+        }
+      ],
+      "title": "Controls Help - Tetris Supervisor"
+    }
+  }
+}

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Controls Help - TETRIS_SUPERVISOR</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#b9c7e0",
+                        "on-secondary-container": "#004119",
+                        "error-container": "#93000a",
+                        "surface-container-high": "#2a2a2b",
+                        "on-primary-fixed-variant": "#3a485c",
+                        "on-surface": "#e4e2e4",
+                        "primary": "#b9c7e0",
+                        "on-background": "#e4e2e4",
+                        "tertiary-container": "#503d1e",
+                        "surface-container": "#1f1f21",
+                        "tertiary": "#dfc299",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed-variant": "#005321",
+                        "inverse-primary": "#515f74",
+                        "on-surface-variant": "#c5c6cd",
+                        "inverse-surface": "#e4e2e4",
+                        "secondary-fixed": "#6bff8f",
+                        "on-tertiary-fixed-variant": "#574424",
+                        "surface-container-highest": "#343536",
+                        "surface-tint": "#b9c7e0",
+                        "on-tertiary-container": "#c3a881",
+                        "primary-container": "#334155",
+                        "surface-variant": "#343536",
+                        "surface": "#131315",
+                        "on-secondary": "#003915",
+                        "on-tertiary-fixed": "#281901",
+                        "on-primary": "#233144",
+                        "tertiary-fixed-dim": "#dfc299",
+                        "tertiary-fixed": "#fcdeb3",
+                        "surface-container-low": "#1b1b1d",
+                        "inverse-on-surface": "#303032",
+                        "primary-fixed": "#d5e3fd",
+                        "outline": "#8e9197",
+                        "surface-dim": "#131315",
+                        "on-secondary-fixed": "#002109",
+                        "surface-bright": "#39393b",
+                        "surface-container-lowest": "#0e0e10",
+                        "on-primary-fixed": "#0d1c2f",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#4ae176",
+                        "on-tertiary": "#3f2d10",
+                        "on-error": "#690005",
+                        "background": "#131315",
+                        "secondary": "#4ae176",
+                        "on-primary-container": "#9eadc5",
+                        "secondary-container": "#00b954",
+                        "outline-variant": "#44474c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "grid-gap": "2px",
+                        "unit": "4px",
+                        "md": "16px",
+                        "container-max": "1200px",
+                        "sm": "8px",
+                        "lg": "24px",
+                        "xs": "4px",
+                        "xl": "32px"
+                    },
+                    "fontFamily": {
+                        "label-compact": ["JetBrains Mono"],
+                        "display-arcade": ["Hanken Grotesk"],
+                        "data-mono": ["JetBrains Mono"],
+                        "h2-hud": ["Hanken Grotesk"],
+                        "h1-hud": ["Hanken Grotesk"],
+                        "body-standard": ["Inter"],
+                        "body-bold": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-compact": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "display-arcade": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "data-mono": ["18px", { "lineHeight": "1", "fontWeight": "500" }],
+                        "h2-hud": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "h1-hud": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-standard": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-bold": ["16px", { "lineHeight": "1.5", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .neon-border {
+            box-shadow: 0 0 10px rgba(74, 225, 118, 0.2), inset 0 0 10px rgba(74, 225, 118, 0.1);
+        }
+        .hud-card {
+            background-color: theme('colors.surface-container');
+            border: 1px solid theme('colors.primary-container');
+            position: relative;
+        }
+        .hud-header {
+            position: absolute;
+            top: -6px;
+            left: 16px;
+            background-color: theme('colors.surface-container');
+            padding: 0 8px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-standard min-h-screen flex flex-col pt-20">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface fixed top-0 left-0 w-full z-50 flex justify-between items-center px-lg py-md border-b border-outline-variant dark:border-outline-variant">
+<div class="font-display-arcade text-h1-hud text-secondary dark:text-secondary tracking-tighter">
+            TETRIS_SUPERVISOR
+        </div>
+<div class="flex gap-md">
+<button class="text-on-surface-variant dark:text-on-surface-variant hover:bg-primary-container/20 dark:hover:bg-primary-container/20 p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">settings</span>
+</button>
+<button class="text-on-surface-variant dark:text-on-surface-variant hover:bg-primary-container/20 dark:hover:bg-primary-container/20 p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">help_outline</span>
+</button>
+</div>
+</header>
+<!-- SideNavBar (Web) -->
+<nav class="hidden md:flex bg-surface-container dark:bg-surface-container flex-col border-r border-outline-variant dark:border-outline-variant fixed left-0 top-0 h-full z-40 pt-20 w-64">
+<div class="px-md py-lg mb-md">
+<div class="font-display-arcade text-h2-hud text-primary dark:text-primary mb-1">SUPERVISOR_OS</div>
+<div class="font-label-compact text-label-compact text-on-surface-variant">V2.04_STABLE</div>
+</div>
+<ul class="flex flex-col gap-sm">
+<li>
+<a class="flex items-center gap-md text-on-surface-variant px-md py-sm opacity-70 hover:bg-surface-container-highest dark:hover:bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined">terminal</span>
+<span class="font-label-compact text-label-compact">Command</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-md text-on-surface-variant px-md py-sm opacity-70 hover:bg-surface-container-highest dark:hover:bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="font-label-compact text-label-compact">Leaderboard</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-md text-on-surface-variant px-md py-sm opacity-70 hover:bg-surface-container-highest dark:hover:bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label-compact text-label-compact">Archive</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-md border-l-4 border-secondary text-secondary bg-secondary/10 px-md py-sm translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-label-compact text-label-compact">Settings</span>
+</a>
+</li>
+</ul>
+</nav>
+<!-- Main Content -->
+<main class="flex-1 md:ml-64 p-lg md:p-xl flex justify-center items-center">
+<div class="w-full max-w-[1000px]">
+<div class="mb-lg flex justify-between items-end border-b border-outline-variant pb-md">
+<div>
+<h1 class="font-h1-hud text-h1-hud text-primary mb-2">SYSTEM_MANUAL</h1>
+<p class="font-data-mono text-data-mono text-on-surface-variant">OPERATIONAL DIRECTIVES // CONTROLS &amp; LOGIC</p>
+</div>
+<button class="bg-transparent border border-outline text-on-surface hover:bg-surface-container-highest font-label-compact text-label-compact px-lg py-sm flex items-center gap-sm transition-colors uppercase">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+                    BACK_TO_MENU
+                </button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl">
+<!-- Controls Column -->
+<div class="hud-card p-xl mt-4">
+<div class="hud-header font-label-compact text-label-compact text-secondary uppercase tracking-widest">
+                        [INPUT_MATRIX]
+                    </div>
+<div class="space-y-xl mt-md">
+<!-- Navigation -->
+<div class="flex items-start gap-lg border-b border-surface-container-highest pb-md">
+<div class="grid grid-cols-3 gap-xs w-32 shrink-0">
+<div class="col-start-2 border border-outline-variant rounded flex justify-center items-center h-10 bg-surface-container-low">
+<span class="material-symbols-outlined text-on-surface">arrow_upward</span>
+</div>
+<div class="col-start-1 row-start-2 border border-outline-variant rounded flex justify-center items-center h-10 bg-surface-container-low">
+<span class="material-symbols-outlined text-on-surface">arrow_back</span>
+</div>
+<div class="col-start-2 row-start-2 border border-outline-variant rounded flex justify-center items-center h-10 bg-surface-container-low">
+<span class="material-symbols-outlined text-on-surface">arrow_downward</span>
+</div>
+<div class="col-start-3 row-start-2 border border-outline-variant rounded flex justify-center items-center h-10 bg-surface-container-low">
+<span class="material-symbols-outlined text-on-surface">arrow_forward</span>
+</div>
+</div>
+<div class="flex flex-col justify-center h-[88px]">
+<h3 class="font-h2-hud text-h2-hud text-primary mb-1">NAVIGATION</h3>
+<p class="font-body-standard text-body-standard text-on-surface-variant">Left/Right arrows translate the active block. Down arrow accelerates descent (Soft Drop). Up arrow rotates block clockwise.</p>
+</div>
+</div>
+<!-- Action Keys -->
+<div class="flex items-start gap-lg border-b border-surface-container-highest pb-md">
+<div class="w-32 shrink-0 flex flex-col gap-sm">
+<div class="border border-secondary rounded flex justify-center items-center h-10 bg-secondary/10 w-full neon-border">
+<span class="font-label-compact text-label-compact text-secondary">SPACEBAR</span>
+</div>
+</div>
+<div class="flex flex-col justify-center h-10">
+<h3 class="font-h2-hud text-h2-hud text-primary mb-1">HARD DROP</h3>
+<p class="font-body-standard text-body-standard text-on-surface-variant">Instantly locks the active block in the lowest valid position.</p>
+</div>
+</div>
+<div class="flex items-start gap-lg">
+<div class="w-32 shrink-0 flex flex-col gap-sm">
+<div class="border border-outline-variant rounded flex justify-center items-center h-10 bg-surface-container-low w-full">
+<span class="font-label-compact text-label-compact text-on-surface">C</span>
+</div>
+</div>
+<div class="flex flex-col justify-center h-10">
+<h3 class="font-h2-hud text-h2-hud text-primary mb-1">HOLD MODULE</h3>
+<p class="font-body-standard text-body-standard text-on-surface-variant">Swaps the active block with the current block in the hold buffer. Limited to once per deployment.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Rules Column -->
+<div class="hud-card p-xl mt-4">
+<div class="hud-header font-label-compact text-label-compact text-primary uppercase tracking-widest">
+                        [SCORING_LOGIC]
+                    </div>
+<div class="space-y-xl mt-md">
+<div class="border border-outline-variant bg-surface-container-low p-md">
+<h3 class="font-h2-hud text-h2-hud text-secondary mb-md border-b border-outline-variant pb-sm">LINE CLEAR PROTOCOLS</h3>
+<ul class="space-y-md font-data-mono text-data-mono text-on-surface-variant">
+<li class="flex justify-between items-center">
+<span>SINGLE_LINE</span>
+<span class="text-primary text-right">100 PTS</span>
+</li>
+<li class="flex justify-between items-center">
+<span>DOUBLE_LINE</span>
+<span class="text-primary text-right">300 PTS</span>
+</li>
+<li class="flex justify-between items-center">
+<span>TRIPLE_LINE</span>
+<span class="text-primary text-right">500 PTS</span>
+</li>
+<li class="flex justify-between items-center border-t border-surface-container-highest pt-md">
+<span class="text-secondary">TETRIS_CLEAR (4)</span>
+<span class="text-secondary font-bold text-right neon-border px-sm py-xs">800 PTS</span>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="font-label-compact text-label-compact text-on-surface-variant uppercase mb-md">MULTIPLIER CONDITIONS</h3>
+<div class="grid gap-md">
+<div class="flex items-start gap-md">
+<span class="material-symbols-outlined text-tertiary">bolt</span>
+<div>
+<div class="font-body-bold text-body-bold text-on-surface">Level Scaling</div>
+<div class="font-body-standard text-body-standard text-on-surface-variant">Base clear points are multiplied by the current operational level (Lvl x PTS).</div>
+</div>
+</div>
+<div class="flex items-start gap-md">
+<span class="material-symbols-outlined text-tertiary">repeat</span>
+<div>
+<div class="font-body-bold text-body-bold text-on-surface">Back-to-Back Bonus</div>
+<div class="font-body-standard text-body-standard text-on-surface-variant">Consecutive Tetris clears yield a 1.5x score multiplier on the subsequent clear.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden bg-surface-container-low dark:bg-surface-container-low fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-md pb-sm pt-xs border-t-2 border-outline-variant dark:border-outline-variant rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 opacity-60 hover:bg-surface-container-high dark:hover:bg-surface-container-high transition-colors w-16" href="#">
+<span class="material-symbols-outlined mb-1">rotate_right</span>
+<span class="font-label-compact text-label-compact text-[10px]">Rotate</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 opacity-60 hover:bg-surface-container-high dark:hover:bg-surface-container-high transition-colors w-16" href="#">
+<span class="material-symbols-outlined mb-1">inventory_2</span>
+<span class="font-label-compact text-label-compact text-[10px]">Hold</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 opacity-60 hover:bg-surface-container-high dark:hover:bg-surface-container-high transition-colors w-16" href="#">
+<span class="material-symbols-outlined mb-1">keyboard_double_arrow_down</span>
+<span class="font-label-compact text-label-compact text-[10px]">Drop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 opacity-60 hover:bg-surface-container-high dark:hover:bg-surface-container-high transition-colors w-16" href="#">
+<span class="material-symbols-outlined mb-1">pause_circle</span>
+<span class="font-label-compact text-label-compact text-[10px]">Pause</span>
+</a>
+</nav>
+</body></html>
